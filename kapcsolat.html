@@ -14,32 +14,33 @@
   </head>
   <body>
     <header>
-      <h1>Bohém Pipások Klub</h1>
-      <div id="navbar">
-        <button
-          onclick="window.location.href='index.html'"
-          class="gombok"
-          id="fooldal"
-        >
-          <span>Főoldal</span>
+    <h1>Bohém Pipások Klub</h1>
+    <button class="hamburger" id="hamburger" aria-label="Menü">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div id="navbar">
+        <button onclick="window.location.href='index.html'" class="gombok" id="fooldal">
+            <span>Főoldal</span>
         </button>
-        <button
-          onclick="window.location.href='rendezvenyek.html'"
-          class="gombok"
-          id="rendezvenyek"
-        >
-          <span>Rendezvények</span>
+        <button onclick="window.location.href='rendezvenyek.html'" class="gombok" id="rendezvenyek">
+            <span>Rendezvények</span>
         </button>
-        <button
-          onclick="window.location.href='kapcsolat.html'"
-          class="gombok"
-          id="kapcsolat"
-        >
-          <span>Kapcsolat és Jelentkezés</span>
+        <button onclick="window.location.href='kapcsolat.html'" class="gombok" id="kapcsolat">
+            <span>Kapcsolat és Jelentkezés</span>
         </button>
-      </div>
+    </div>
     </header>
-
+    <div id="adatok">
+        <ul>
+            <li>Helyszín: Budapest, Nefelejcs u. 14, 1078</li>
+            <li>Facebook: Bohém Pipások</li>
+            <li>Nyitvatartás: 10:00 - 21:00</li>
+            <li>E-MAIL: info@bohempipasok.hu</li>
+        </ul>
+    </div>
+    
     <div class="urlap-container">
       <h2>Jelentkezési Űrlap</h2>
       <form id="jelentkezesiUrlap">
@@ -75,8 +76,7 @@
 
         <div class="urlap">
           <label for="rendezveny1"
-            >Kiválasztott rendezvény <span class="kotelező">*</span></label
-          >
+            >Kiválasztott rendezvény <span class="kotelező">*</span></label>
           <select id="rendezveny1" name="rendezveny1">
             <option value="">Rendezvények betöltése...</option>
           </select>
@@ -85,8 +85,7 @@
 
         <div class="urlap">
           <label for="resztvevok"
-            >Résztvevők száma <span class="kotelező">*</span></label
-          >
+            >Résztvevők száma <span class="kotelező">*</span></label>
           <input
             type="number"
             id="resztvevok"
@@ -98,11 +97,10 @@
           <div class="hiba-uzenet" id="resztvevokHiba"></div>
         </div>
 
-        <button type="submit" class="submit-btn" id="submitBtn">
-          Jelentkezés
-        </button>
+        <button type="submit" class="submit-btn" id="submitBtn">Jelentkezés</button>
       </form>
     </div>
+    <div id="terkep"><img src="terkep.svg" alt="terkep" style="width: 600px; border: 3px solid black"></div>
     <script src="script.js"></script>
     <script src="hamburger.js"></script>
   </body>

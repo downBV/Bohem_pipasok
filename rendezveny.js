@@ -107,9 +107,7 @@ function megjelenítRendezvenyeket(rendezvenyek) {
                 <li>${rendezveny.leiras}</li>
                 <br>
                 <span class="kategoria-badge">${rendezveny.kategoria}</span>
-            </ul>
-        `;
-        
+            </ul>`;
         container.appendChild(kartya);
     });
 }
