@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kapcsolat és Jelentkezés</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Bohém Pipások Klub</h1>
+      <div id="navbar">
+        <button
+          onclick="window.location.href='index.html'"
+          class="gombok"
+          id="fooldal"
+        >
+          <span>Főoldal</span>
+        </button>
+        <button
+          onclick="window.location.href='rendezvenyek.html'"
+          class="gombok"
+          id="rendezvenyek"
+        >
+          <span>Rendezvények</span>
+        </button>
+        <button
+          onclick="window.location.href='kapcsolat.html'"
+          class="gombok"
+          id="kapcsolat"
+        >
+          <span>Kapcsolat és Jelentkezés</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="urlap-container">
+      <h2>Jelentkezési Űrlap</h2>
+      <form id="jelentkezesiUrlap">
+        <div class="urlap">
+          <label for="nev">Név <span class="kotelező">*</span></label>
+          <input type="text" id="nev" name="nev" placeholder="Teljes név" />
+          <div class="hiba-uzenet" id="nevHiba"></div>
+        </div>
+
+        <div class="urlap">
+          <label for="telefon"
+            >Telefonszám <span class="kotelező">*</span></label
+          >
+          <input
+            type="tel"
+            id="telefon"
+            name="telefon"
+            placeholder="+36301234567 vagy 06301234567"
+          />
+          <div class="hiba-uzenet" id="telefonHiba"></div>
+        </div>
+
+        <div class="urlap">
+          <label for="email">E-mail cím <span class="kotelező">*</span></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="pelda@email.hu"
+          />
+          <div class="hiba-uzenet" id="emailHiba"></div>
+        </div>
+
+        <div class="urlap">
+          <label for="rendezveny1"
+            >Kiválasztott rendezvény <span class="kotelező">*</span></label
+          >
+          <select id="rendezveny1" name="rendezveny1">
+            <option value="">Rendezvények betöltése...</option>
+          </select>
+          <div class="hiba-uzenet" id="rendezveny1Hiba"></div>
+        </div>
+
+        <div class="urlap">
+          <label for="resztvevok"
+            >Résztvevők száma <span class="kotelező">*</span></label
+          >
+          <input
+            type="number"
+            id="resztvevok"
+            name="resztvevok"
+            min="1"
+            max="10"
+            placeholder="1-10 fő"
+          />
+          <div class="hiba-uzenet" id="resztvevokHiba"></div>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn">
+          Jelentkezés
+        </button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+    <script src="hamburger.js"></script>
+  </body>
+</html>

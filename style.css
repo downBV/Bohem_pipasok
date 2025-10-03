@@ -1,0 +1,638 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Alan Sans", sans-serif;
+}
+
+body {
+  color: #2e5478;
+  background: linear-gradient(180deg, #00bbff 0%, #5a0d0d5c 100%);
+  min-height: 100vh;
+}
+
+header {
+  padding-top: 10px;
+  background-color: black;
+}
+
+h1 {
+  text-align: center;
+  margin: auto;
+  font-size: 50px;
+  width: 100%;
+  color: white;
+}
+
+#navbar {
+  display: flex;
+  color: white;
+  background-color: black;
+  border-bottom: white solid 3px;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  justify-content: space-evenly;
+  padding: 0 0px;
+  gap: 0px;
+  margin-bottom: 50px;
+}
+
+/* Hamburger menü */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 2000;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+}
+
+.hamburger span {
+  width: 35px;
+  height: 4px;
+  background-color: white;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
+.gombok {
+  width: 100%;
+  max-width: 33.3%;
+  background-color: transparent;
+  border: 0px;
+  font-size: 30px;
+  color: white;
+  transition: 1s;
+}
+
+.gombok:hover {
+  background-color: rgb(79, 79, 79);
+}
+
+#content {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: white solid 3px;
+}
+
+#leiras {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  width: 100%;
+  max-width: 40%;
+}
+
+#esemeny {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  width: 100%;
+  max-width: 40%;
+}
+
+#cts {
+  width: 100%;
+  max-width: 80%;
+  background-color: beige;
+  font-size: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  transition: 1s;
+}
+
+#cts:hover {
+  background-color: rgba(255, 0, 68, 0.455);
+}
+
+#adatok {
+  display: flex;
+  justify-content: center;
+  border-bottom: 3px solid white;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+#kepek {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 10px;
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+#esemenylista {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.kartyak {
+  display: flex;
+  width: 50%;
+  max-width: 50%;
+  height: 300px;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: beige;
+  gap: 20px;
+  margin-bottom: 30px;
+  align-items: center;
+  transition: 0.3s;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  p {
+    transition: 0.5s;
+  }
+  ul {
+    margin: 0 auto;
+    text-align: center;
+    list-style-type: none;
+    transition: 0.5s;
+    li {
+      margin-top: 5px;
+      font-size: 10px;
+      text-align: center;
+      transition: 0.5s;
+    }
+  }
+}
+
+.kartyak:hover {
+  width: 60%;
+  max-width: 60%;
+  height: 400px;
+}
+
+.urlap-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: beige;
+  border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.urlap-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.urlap {
+  margin-bottom: 20px;
+}
+
+.urlap label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.urlap input,
+.urlap select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "Alan Sans", sans-serif;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.urlap input:focus,
+.urlap select:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+.urlap input.valid,
+.urlap select.valid {
+  border-color: #4caf50;
+  background-color: #f0fff0;
+}
+
+.urlap input.error,
+.urlap select.error {
+  border-color: #f44336;
+  background-color: #fff0f0;
+}
+
+.hiba-uzenet {
+  display: none;
+  color: #f44336;
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Alan Sans", sans-serif;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.submit-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.kotelező {
+  color: red;
+}
+
+.szuro-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(245, 245, 220, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.kereses-box {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-family: 'Alan Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+.kereses-box:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.kategoria-gombok {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.kategoria-gomb {
+    padding: 10px 20px;
+    border: 2px solid #333;
+    background-color: white;
+    color: #333;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Alan Sans', sans-serif;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+.kategoria-gomb:hover {
+    background-color: #333;
+    color: white;
+}
+
+.kategoria-gomb.active {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    color: white;
+}
+
+.nincs-talalat {
+    text-align: center;
+    padding: 40px;
+    font-size: 20px;
+    color: white;
+    display: none;
+}
+
+.betoltes {
+    text-align: center;
+    padding: 40px;
+    font-size: 20px;
+    color: white;
+}
+
+.kategoria-badge {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+/* Tablet nézet (768px-ig) */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 35px;
+  }
+
+  /* Hamburger menü megjelenítése */
+  .hamburger {
+    display: flex;
+  }
+
+  #navbar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.98);
+    transition: right 0.3s ease;
+    padding-top: 80px;
+    gap: 0;
+    z-index: 1500;
+    border-bottom: none;
+    border-left: white solid 3px;
+  }
+
+  #navbar.active {
+    right: 0;
+  }
+
+  .gombok {
+    max-width: 100%;
+    width: 100%;
+    font-size: 24px;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  #content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #leiras,
+  #esemeny {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  #cts {
+    max-width: 100%;
+    font-size: 24px;
+  }
+
+  .kartyak {
+    width: 80%;
+    max-width: 80%;
+    height: auto;
+    min-height: 200px;
+  }
+
+  .kartyak:hover {
+    width: 90%;
+    max-width: 90%;
+    height: auto;
+  }
+
+  .urlap-container {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .szuro-container {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .kategoria-gombok {
+    gap: 8px;
+  }
+
+  .kategoria-gomb {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  #esemenylista {
+    padding: 15px;
+  }
+}
+
+/* Mobil nézet (480px-ig) */
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+    padding: 10px;
+  }
+
+  .hamburger {
+    top: 60px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .hamburger span {
+    width: 30px;
+    height: 3px;
+  }
+
+  #navbar {
+    width: 80%;
+    padding-top: 70px;
+  }
+
+  .gombok {
+    font-size: 20px;
+    padding: 18px;
+  }
+
+  #content {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  #leiras,
+  #esemeny {
+    max-width: 95%;
+  }
+
+  #cts {
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  #kepek {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .kartyak {
+    width: 95%;
+    max-width: 95%;
+    padding: 15px;
+    height: auto;
+    min-height: 180px;
+  }
+
+  .kartyak:hover {
+    width: 98%;
+    max-width: 98%;
+    height: auto;
+  }
+
+  .kartyak p {
+    font-size: 18px !important;
+  }
+
+  .kartyak ul {
+    font-size: 16px !important;
+  }
+
+  .kartyak ul li {
+    font-size: 14px !important;
+  }
+
+  .kartyak:hover p {
+    font-size: 24px !important;
+  }
+
+  .kartyak:hover ul {
+    font-size: 20px !important;
+  }
+
+  .kartyak:hover ul li {
+    font-size: 18px !important;
+  }
+
+  .urlap-container {
+    max-width: 95%;
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .urlap-container h2 {
+    font-size: 24px;
+  }
+
+  .urlap input,
+  .urlap select {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .submit-btn {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .szuro-container {
+    max-width: 95%;
+    padding: 10px;
+  }
+
+  .kereses-box {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .kategoria-gombok {
+    gap: 5px;
+  }
+
+  .kategoria-gomb {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .kategoria-badge {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  #esemenylista {
+    padding: 10px;
+  }
+
+  .nincs-talalat,
+  .betoltes {
+    font-size: 16px;
+    padding: 30px 10px;
+  }
+}
+
+/* Nagyon kicsi mobilok (360px-ig) */
+@media screen and (max-width: 360px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  #navbar {
+    width: 85%;
+  }
+
+  .gombok {
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  #cts {
+    font-size: 18px;
+  }
+
+  .kartyak {
+    width: 98%;
+    max-width: 98%;
+  }
+
+  .urlap-container {
+    padding: 10px;
+  }
+
+  .kategoria-gomb {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+}

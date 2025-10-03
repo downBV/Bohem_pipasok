@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rendezvények</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bohém Pipások Klub</h1>
+            <div id="navbar">
+                <button onclick="window.location.href='index.html'" class="gombok" id="fooldal">
+                    <span>Főoldal</span>
+                </button>
+                <button onclick="window.location.href='rendezvenyek.html'" class="gombok" id="rendezvenyek">
+                    <span>Rendezvények</span>
+                </button>
+                <button onclick="window.location.href='kapcsolat.html'" class="gombok" id="kapcsolat">
+                    <span>Kapcsolat és Jelentkezés</span>
+                </button>
+            </div>
+    </header>
+
+    <h1 style="font-size: 30px; margin-bottom: 20px">Közelgő események</h1>
+
+    <div class="szuro-container">
+        <input 
+            type="text" 
+            id="keresomező" 
+            class="kereses-box" 
+            placeholder="Keresés rendezvény neve alapján..."
+        >
+        
+        <div class="kategoria-gombok" id="kategoriaGombok">
+            <button class="kategoria-gomb active" data-kategoria="mind">Mind</button>
+        </div>
+    </div>
+
+    <div id="betoltes" class="betoltes">Rendezvények betöltése.</div>
+    <div id="nincsTalalat" class="nincs-talalat">Nincs találat a keresési feltételeknek megfelelően.</div>
+
+    <div id="esemenylista">
+    </div>
+
+    <script src="rendezveny.js"></script>
+    <script src="hamburger.js"></script>
+</body>
+</html>

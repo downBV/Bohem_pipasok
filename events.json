@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "nev": "Bohém Amatőr Lassúsági Pipaszívó Bajnokság",
+    "datum": "2025.10.04",
+    "helyszin": "Bár!Mi? bár",
+    "belepes": "Ingyenes",
+    "leiras": "Ez lesz a 4. egyben befejező forduló",
+    "kategoria": "Verseny"
+  },
+  {
+    "id": 2,
+    "nev": "Tabak Expo 2025",
+    "datum": "2025.10.07",
+    "helyszin": "Hungexpo C csarnok | Budapest, Albertirsai út 10, 1101",
+    "belepes": "8000 Ft",
+    "leiras": "A Tabak Expo több éves múltra visszatekintő kiállítás, vásár és konferencia.",
+    "kategoria": "Kiállítás"
+  },
+  {
+    "id": 3,
+    "nev": "Szabó Pipagyár látogatás",
+    "datum": "2025.10.17",
+    "helyszin": "2750 Nagykőrös, Kecskeméti út 61.",
+    "belepes": "Ingyenes",
+    "leiras": "Meglátogatjuk a Szabó Pipagyár boltját Nagykőrösön!",
+    "kategoria": "Kézműves"
+  },
+  {
+    "id": 4,
+    "nev": "Pipa készítés megtanulása",
+    "datum": "2025.11.05",
+    "helyszin": "Buz'Go Pipaműhely, Budapest",
+    "belepes": "Ingyenes",
+    "leiras": "Tanuljunk meg pipát készíteni egy tapasztalt mester vezetésével!",
+    "kategoria": "Kézműves"
+  },
+  {
+    "id": 5,
+    "nev": "Digitális Dohányzás Konferencia",
+    "datum": "2025.11.20",
+    "helyszin": "Tech Hub, Budapest",
+    "belepes": "Ingyenes",
+    "leiras": "Modern technológiák a dohányiparban: e-cigaretta, applikációk és trendek.",
+    "kategoria": "Digitalizáció"
+  },
+  {
+    "id": 6,
+    "nev": "Bohém Pipások Találkozó",
+    "datum": "2025.12.01",
+    "helyszin": "Bár!Mi? bár, Budapest",
+    "belepes": "Ingyenes",
+    "leiras": "Havi találkozónk minden pipás barátunk számára!",
+    "kategoria": "Társasági"
+  }
+]
