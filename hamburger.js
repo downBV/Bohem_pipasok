@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
             navbar.classList.toggle('active');
         });
 
-        // Menü bezárása, ha egy menüpontra kattintunk
         const menuButtons = navbar.querySelectorAll('.gombok');
         menuButtons.forEach(button => {
             button.addEventListener('click', function() {
@@ -17,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        // Menü bezárása, ha a navbar-on kívülre kattintunk
         document.addEventListener('click', function(event) {
             const isClickInsideNavbar = navbar.contains(event.target);
             const isClickOnHamburger = hamburger.contains(event.target);
